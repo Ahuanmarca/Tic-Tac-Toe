@@ -1,0 +1,361 @@
+/* CONTAINER FOR THE TWO MAIN COLUMNS... Left == 3x3 board, Right == controls */
+/* #container {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 800px;
+    /* margin: 50px; */
+/* } */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    flex-wrap: nowrap;
+    width: 850px;
+    /* margin: 50px; */
+}
+
+/* .containerColumn {
+    width: 50%;
+} */
+
+/* BOARD CONTAINING 3X3 GRID */
+#board {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 5px;
+    /* margin: auto; */
+    width: 316px;
+    /* justify-content: center; */
+    background-color: black;
+}
+
+/* CELLS INSIDE THE 3X3 GRID */
+#board > div {
+    font-family: 'Indie Flower', cursive;
+    user-select: none;
+    border: solid 1px white;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    background-color: white;
+    color: magenta;
+    /* font-weight: bold; */
+}
+
+
+/* CONTROLS (RIGHT COLUMN) */
+
+#controls {
+    width: 316px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* MAIN HEADER - TIC TAC TOE! */
+h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* STATUS DISPLAY */
+
+/* Fixed height for status display */
+#controls > div:nth-child(2)  {
+    height: 50px;
+    /* background-color: chartreuse; */
+}
+
+/* Initial */
+.initialDisplay {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color:slateblue;
+}
+
+
+.xPlayerDisplay {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    /* font-weight: bold; */
+    color: blue;
+}
+
+.oPlayerDisplay {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    /* font-weight: bold; */
+    color: red;
+}
+
+.tieDisplay {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    font-weight: bold;
+    color: magenta;
+}
+
+#choosePlayer, #chooseDifficulty {
+    /* font-family: 'Indie Flower', cursive; */
+    font-family: 'Courier New', Courier, monospace;
+
+    /* font-weight: bold; */
+    /* font-size: 2rem */
+}
+
+
+
+/* SCORE KEEPER */
+#scoreKeeper, .scoreKeeperCell {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#scoreKeeper {
+    width: 50%;
+}
+
+.scoreKeeperCell {
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    text-align: center;
+    width: 50%;
+}
+
+.xDisplay {
+    color: blue;
+}
+.oDisplay {
+    color: red;
+}
+
+#restartButton {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* SMALL SCREEN IN LANDSCAPE MODE */
+
+@media(min-width:0px) and (max-width:681px) and (orientation: landscape) {
+    /* .hideOnMobile {
+        display: none;
+    } */
+    .showOnMobile {
+        /* font-family: 'Courier New', Courier, monospace; */
+        display: none;
+    }
+
+    #container {
+        width: 570px;
+        min-width: 570px;
+        justify-content: space-between;
+        margin: 5%;
+    }
+
+    /* BOARD CONTAINING 3X3 GRID */
+    #board {
+        width: 220px;
+        align-self: center;
+    }
+    
+    #board {
+        width: 220px;
+        align-self: center;
+        gap: 3px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    /* CELLS INSIDE THE 3X3 GRID */
+    #board > div {
+        border: solid 1px white;
+        height: 70px;
+        width: 70px;
+        font-size: 3rem;
+    }
+
+
+
+    /* #controls {
+        font-size: smaller;
+    } */
+}
+
+
+
+
+
+/* FOR DEBUGGING */
+
+/* #container {
+    border: 1px solid blue;
+} */
+
+
+
+/* PANTALLA CHICA */
+@media(min-width:0px) and (max-width:680px) and (orientation: portrait) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 95vh;
+    }
+
+    #container {
+        width: 330px;
+        height: 90vh;
+        max-height: 700px;
+        flex-shrink: 0;
+        margin: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .showOnMobile {
+        font-family: 'Courier New', Courier, monospace;
+        align-self: center;
+    }
+
+    #controls {
+        height: 316px;
+        width: 70%;
+        align-self: center;
+    }
+
+    /* BOARD CONTAINING 3X3 GRID */
+    #board {
+        width: 220px;
+        align-self: center;
+        gap: 3px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    /* CELLS INSIDE THE 3X3 GRID */
+    #board > div {
+        border: solid 1px white;
+        height: 70px;
+        width: 70px;
+        font-size: 3rem;
+    }
+
+    h1 {
+        margin-top: 20px;
+    }
+
+}
+
+/* PANTALLA INTERMEDIA */
+@media(min-width:681px) and (max-width:900px) {
+    #container {
+        width: 624px;
+        flex-shrink: 0;
+        margin: 50px;
+    }
+
+    .showOnMobile {
+        display: none;
+    }
+
+    #controls {
+        width: 270px;
+    }
+}
+
+/* PANTALLA GRANDE */
+@media(min-width:900px) {
+
+    /* CONTAINER FOR THE TWO MAIN COLUMNS... Left == 3x3 board, Right == controls */
+    #container {
+        width: 870px;
+        flex-shrink: 0;
+        margin: 50px;
+    }
+
+    /* BOARD CONTAINING 3X3 GRID */
+    #board {
+        width: 466px;
+    }
+    
+    /* CELLS INSIDE THE 3X3 GRID */
+    #board > div {
+        /* border: solid 1px white; */
+        height: 150px;
+        width: 150px;
+        font-size: 7rem;
+    }
+
+    .showOnMobile {
+        display: none;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    #controls {
+        width: 350px;
+    }
+
+    /* Fixed height for status display */
+    #controls > div:nth-child(2)  {
+        height: 80px;
+    }
+
+    /* Initial */
+    .initialDisplay {
+        font-size: 1.8rem;
+    }
+
+    .xPlayerDisplay {
+        font-size: 3.5rem;
+        line-height: 5rem;
+    }
+
+    .oPlayerDisplay {
+        font-size: 3.5rem;
+        line-height: 5rem;
+    }
+
+    .tieDisplay {
+        font-size: 3.5rem;
+        line-height: 5rem;
+    }
+
+    #choosePlayerDiv, #chooseDifficultyDiv, #scoreDiv {
+        font-size: x-large;
+    }
+    
+    #choosePlayer, #chooseDifficulty, #restartButton {
+        font-size: large;
+    }
+
+    .scoreKeeperCell {
+        font-size:x-large;
+    }
+}

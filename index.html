@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <audio id="winSFX" src="assets/winSFX.mp3"></audio>
+    <audio id="looseSFX" src="assets/looseSFX.mp3"></audio>
+    <audio id="drawSFX" src="assets/drawSFX.mp3"></audio>
+    <audio id="move1SFX" src="assets/move001_SFX.mp3"></audio>
+    <audio id="move2SFX" src="assets/move002_SFX.mp3"></audio>
+    <audio id="move3SFX" src="assets/move003_SFX.mp3"></audio>
+    <audio id="move4SFX" src="assets/move004_SFX.mp3"></audio>
+    <audio id="move5SFX" src="assets/move005_SFX.mp3"></audio>
+    <audio id="move6SFX" src="assets/move006_SFX.mp3"></audio>
+    <audio id="move7SFX" src="assets/move007_SFX.mp3"></audio>
+    <audio id="move8SFX" src="assets/move008_SFX.mp3"></audio>
+    <audio id="move9SFX" src="assets/move009_SFX.mp3"></audio>
+
+    <!-- <div class="wideScreen"> -->
+
+        <!-- <div></div> -->
+
+        <div id="container">
+    
+            <div class="showOnMobile">
+                <h1>Tic Tac Toe!</h1>
+            </div>
+
+            <!-- <div class="containerColumn"> -->
+                <!-- BOARD -->
+                <section id="board">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </section>
+
+            <!-- </div> -->
+            <!-- <div class="containerColumn"> -->
+                <!-- Control Panel -->
+                <section id="controls">
+        
+                    <!-- TITTLE: TIC TAC TOE! -->
+                    <div class="hideOnMobile">
+                        <h1>Tic Tac Toe!</h1>
+                    </div>
+        
+                    <!-- STATUS DISPLAY -->
+                    <div>
+                        <span id="statusDisplay" class="initialDisplay"></span>
+                    </div>
+        
+                    <!-- CHOOSE PLAYER DROPDOWN MENU -->
+                    <div id="choosePlayerDiv">
+                        <label for="choosePlayer">player</label>
+                        <select name="choosePlayer" id="choosePlayer">
+                            <option value="X">X</option>
+                            <option value="O">O</option>
+                        </select>
+                    </div>
+        
+                    <!-- DIFFICULTY DROPDOWN MENU -->
+                    <div id="chooseDifficultyDiv">
+                        <label for="chooseDifficulty">difficulty</label>
+                        <select name="chooseDifficulty" id="chooseDifficulty">
+                            <option value="easy">Easy</option>
+                            <option value="medium" selected="selected">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+        
+                    <!-- SCORE TABLE -->
+                    <div>
+                        <div id="scoreDiv">
+                            <span>score</span>
+                        </div>
+                        <table id="scoreKeeper">
+                            
+                            <tr>
+                                <td class="scoreKeeperCell xDisplay">X</td>
+                                <td class="scoreKeeperCell" id="xWinsDisplay">-</td>
+                            </tr>
+                            <tr>
+                                <td class="scoreKeeperCell oDisplay">O</td>
+                                <td class="scoreKeeperCell" id="oWinsDisplay">-</td>
+                            </tr>
+                        </table>
+                    </div>
+                        
+                    <!-- RESTART GAME BUTTON -->
+                    <div>
+                        <button type="button" id="restartButton">restart game</button>
+                    </div>
+        
+                    <!-- WINNER DISPLAY -->
+                    <!-- <div>
+                        <span id="winnerDisplay"></span>
+                    </div> -->
+            
+                </section>
+
+            <!-- </div> -->
+        
+    
+        </div>
+
+        <!-- <div></div> -->
+    <!-- </div> -->
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
