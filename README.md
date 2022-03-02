@@ -4,7 +4,7 @@ Tic Tac Toe game with HTML, CSS and JavaScript.
 My first ever program written from scratch. Tic Tac Toe game with HTML, CSS and JavaScript.
 
 Features:
-- Usar can select symbol (X or O)
+- User can select symbol (X or O)
 - Can select difficulty (3 levels)
 - A score keeper keeps track of wins
 - Status display shows current player / winner of match
@@ -15,6 +15,7 @@ Problems:
 - "Easy" and "Hard" work ok, but "Medium" should be a little easier
 - Some animation is needed when 3 in a row is achieved
 - Needs a button to toggle on/off the sound
+- The responsibe layout it's ok in big screens, but doen't look very good on mobile devices
 
 Computer AI:
 - Uses the Minimax Algorithm to choose what move to make (as seen on Bryan Yu's lecture on AI)

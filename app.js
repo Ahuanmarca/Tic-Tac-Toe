@@ -1,4 +1,4 @@
-// Object literal with information about the game
+// OBJECT LITERAL WITH INFORMATION ABOUT THE GAME
 const gameStatus = {
 	gameOver: false,
     winner: "",
@@ -15,7 +15,9 @@ const gameStatus = {
     oWins: 0,
     // Difficulty (computer behaviour)
     difficulty: 1,
+    // Keep track of bad moves in a match, so they can be limited - Not currently in use
     badMoves: 0,
+    // Keep track of blocked wins, so they can be limited - Not currently in use
     blockedWins: 0
 }
 
