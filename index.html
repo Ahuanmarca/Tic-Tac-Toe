@@ -28,107 +28,89 @@
     <audio id="move8SFX" src="assets/move008_SFX.mp3"></audio>
     <audio id="move9SFX" src="assets/move009_SFX.mp3"></audio>
 
-    <!-- <div class="wideScreen"> -->
 
-        <!-- <div></div> -->
+    <div id="container">
 
-        <div id="container">
-    
-            <div class="showOnMobile">
+        <div class="showOnMobile">
+            <h1>Tic Tac Toe!</h1>
+        </div>
+
+        <!-- BOARD -->
+        <section id="board">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </section>
+
+        <!-- Control Panel -->
+        <section id="controls">
+
+            <!-- TITTLE: TIC TAC TOE! -->
+            <div class="hideOnMobile">
                 <h1>Tic Tac Toe!</h1>
             </div>
 
-            <!-- <div class="containerColumn"> -->
-                <!-- BOARD -->
-                <section id="board">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </section>
+            <!-- STATUS DISPLAY -->
+            <div>
+                <span id="statusDisplay" class="initialDisplay"></span>
+            </div>
 
-            <!-- </div> -->
-            <!-- <div class="containerColumn"> -->
-                <!-- Control Panel -->
-                <section id="controls">
-        
-                    <!-- TITTLE: TIC TAC TOE! -->
-                    <div class="hideOnMobile">
-                        <h1>Tic Tac Toe!</h1>
-                    </div>
-        
-                    <!-- STATUS DISPLAY -->
-                    <div>
-                        <span id="statusDisplay" class="initialDisplay"></span>
-                    </div>
-        
-                    <!-- CHOOSE PLAYER DROPDOWN MENU -->
-                    <div id="choosePlayerDiv">
-                        <label for="choosePlayer">player</label>
-                        <select name="choosePlayer" id="choosePlayer">
-                            <option value="X">X</option>
-                            <option value="O">O</option>
-                        </select>
-                    </div>
-        
-                    <!-- DIFFICULTY DROPDOWN MENU -->
-                    <div id="chooseDifficultyDiv">
-                        <label for="chooseDifficulty">difficulty</label>
-                        <select name="chooseDifficulty" id="chooseDifficulty">
-                            <option value="easy">Easy</option>
-                            <option value="medium" selected="selected">Medium</option>
-                            <option value="hard">Hard</option>
-                        </select>
-                    </div>
-        
-                    <!-- SCORE TABLE -->
-                    <div>
-                        <div id="scoreDiv">
-                            <span>score</span>
-                        </div>
-                        <table id="scoreKeeper">
-                            
-                            <tr>
-                                <td class="scoreKeeperCell xDisplay">X</td>
-                                <td class="scoreKeeperCell" id="xWinsDisplay">-</td>
-                            </tr>
-                            <tr>
-                                <td class="scoreKeeperCell oDisplay">O</td>
-                                <td class="scoreKeeperCell" id="oWinsDisplay">-</td>
-                            </tr>
-                        </table>
-                    </div>
-                        
-                    <!-- RESTART GAME BUTTON -->
-                    <div>
-                        <button type="button" id="restartButton">restart game</button>
-                    </div>
-        
-                    <!-- WINNER DISPLAY -->
-                    <!-- <div>
-                        <span id="winnerDisplay"></span>
-                    </div> -->
-            
-                </section>
+            <!-- CHOOSE PLAYER DROPDOWN MENU -->
+            <div id="choosePlayerDiv">
+                <label for="choosePlayer">player</label>
+                <select name="choosePlayer" id="choosePlayer">
+                    <option value="X">X</option>
+                    <option value="O">O</option>
+                </select>
+            </div>
 
-            <!-- </div> -->
-        
+            <!-- DIFFICULTY DROPDOWN MENU -->
+            <div id="chooseDifficultyDiv">
+                <label for="chooseDifficulty">difficulty</label>
+                <select name="chooseDifficulty" id="chooseDifficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected="selected">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+
+            <!-- SCORE TABLE -->
+            <div>
+                <div id="scoreDiv">
+                    <span>score</span>
+                </div>
+                <table id="scoreKeeper">
+                    
+                    <tr>
+                        <td class="scoreKeeperCell xDisplay">X</td>
+                        <td class="scoreKeeperCell" id="xWinsDisplay">-</td>
+                    </tr>
+                    <tr>
+                        <td class="scoreKeeperCell oDisplay">O</td>
+                        <td class="scoreKeeperCell" id="oWinsDisplay">-</td>
+                    </tr>
+                </table>
+            </div>
+                
+            <!-- RESTART GAME BUTTON -->
+            <div>
+                <button type="button" id="restartButton">restart game</button>
+            </div>
+
+            <!-- WINNER DISPLAY -->
+            <!-- <div>
+                <span id="winnerDisplay"></span>
+            </div> -->
     
-        </div>
+        </section>
 
-        <!-- <div></div> -->
-    <!-- </div> -->
-
-
-
-
-
-
+    </div>
 
     <script src="app.js"></script>
 </body>

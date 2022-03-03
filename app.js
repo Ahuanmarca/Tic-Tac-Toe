@@ -713,8 +713,6 @@ function randomPick(list) {
 // PLAY SOUND
 function playSound() {
     document.querySelector(`#move${gameStatus.turn + 1}SFX`).play();
-    // document.querySelector("#move1SFX").play();
-
 }
 
 
