@@ -14,27 +14,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <audio id="winSFX" src="assets/winSFX.mp3"></audio>
-    <audio id="looseSFX" src="assets/looseSFX.mp3"></audio>
-    <audio id="drawSFX" src="assets/drawSFX.mp3"></audio>
-    <audio id="move1SFX" src="assets/move001_SFX.mp3"></audio>
-    <audio id="move2SFX" src="assets/move002_SFX.mp3"></audio>
-    <audio id="move3SFX" src="assets/move003_SFX.mp3"></audio>
-    <audio id="move4SFX" src="assets/move004_SFX.mp3"></audio>
-    <audio id="move5SFX" src="assets/move005_SFX.mp3"></audio>
-    <audio id="move6SFX" src="assets/move006_SFX.mp3"></audio>
-    <audio id="move7SFX" src="assets/move007_SFX.mp3"></audio>
-    <audio id="move8SFX" src="assets/move008_SFX.mp3"></audio>
-    <audio id="move9SFX" src="assets/move009_SFX.mp3"></audio>
-
-
+    
     <div id="container">
-
+        
         <div class="showOnMobile">
             <h1>Tic Tac Toe!</h1>
         </div>
-
+        
         <!-- BOARD -->
         <section id="board">
             <div class="cell"></div>
@@ -47,46 +33,45 @@
             <div class="cell"></div>
             <div class="cell"></div>
         </section>
-
+        
         <!-- Control Panel -->
         <section id="controls">
-
+            
             <!-- TITTLE: TIC TAC TOE! -->
             <div class="hideOnMobile">
                 <h1>Tic Tac Toe!</h1>
             </div>
-
+            
             <!-- STATUS DISPLAY -->
             <div>
                 <span id="statusDisplay" class="initialDisplay"></span>
             </div>
-
+            
             <!-- CHOOSE PLAYER DROPDOWN MENU -->
             <div id="choosePlayerDiv">
                 <label for="choosePlayer">player</label>
-                <select name="choosePlayer" id="choosePlayer">
+                <select name="choosePlayer" id="choosePlayer" class="pointerOnHover">
                     <option value="X">X</option>
                     <option value="O">O</option>
                 </select>
             </div>
-
+            
             <!-- DIFFICULTY DROPDOWN MENU -->
             <div id="chooseDifficultyDiv">
                 <label for="chooseDifficulty">difficulty</label>
-                <select name="chooseDifficulty" id="chooseDifficulty">
+                <select name="chooseDifficulty" id="chooseDifficulty" class="pointerOnHover">
                     <option value="easy">Easy</option>
                     <option value="medium" selected="selected">Medium</option>
                     <option value="hard">Hard</option>
                 </select>
             </div>
-
-            <!-- SCORE TABLE -->
+            
+            <!-- SCORE KEEPER -->
             <div>
                 <div id="scoreDiv">
                     <span>score</span>
                 </div>
                 <table id="scoreKeeper">
-                    
                     <tr>
                         <td class="scoreKeeperCell xDisplay">X</td>
                         <td class="scoreKeeperCell" id="xWinsDisplay">-</td>
@@ -97,21 +82,32 @@
                     </tr>
                 </table>
             </div>
-                
+            
             <!-- RESTART GAME BUTTON -->
             <div>
-                <button type="button" id="restartButton">restart game</button>
+                <button type="button" id="restartButton" class="pointerOnHover">restart game</button>
             </div>
-
-            <!-- WINNER DISPLAY -->
-            <!-- <div>
-                <span id="winnerDisplay"></span>
-            </div> -->
-    
+            
         </section>
-
+        
     </div>
 
+    <div id="audioEffects" style="display:none">
+        <audio id="win_Sound" src="assets/win.mp3"></audio>
+        <audio id="lose_Sound" src="assets/lose.mp3"></audio>
+        <audio id="draw_Sound" src="assets/draw.mp3"></audio>
+        <audio id="move1_Sound" src="assets/1.mp3"></audio>
+        <audio id="move2_Sound" src="assets/2.mp3"></audio>
+        <audio id="move3_Sound" src="assets/3.mp3"></audio>
+        <audio id="move4_Sound" src="assets/4.mp3"></audio>
+        <audio id="move5_Sound" src="assets/5.mp3"></audio>
+        <audio id="move6_Sound" src="assets/6.mp3"></audio>
+        <audio id="move7_Sound" src="assets/7.mp3"></audio>
+        <audio id="move8_Sound" src="assets/8.mp3"></audio>
+        <audio id="move9_Sound" src="assets/9.mp3"></audio>
+    </div>
+    
+    <script src="functions.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
