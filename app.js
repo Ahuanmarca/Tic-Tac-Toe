@@ -1,5 +1,5 @@
 // TicTacToe game with HTML, CSS and JavaScript
-// Version 3.0, 12-March-20202
+// Version 3.0, 13-March-20202
 
 
 // Difficulty setting
